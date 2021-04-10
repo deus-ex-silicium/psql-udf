@@ -1,11 +1,15 @@
+/*
+COMPILE WITH Release x86 CONFIGURATION
+*/
+
 #define _WINSOCK_DEPRECATED_NO_WARNINGS
 #include "postgres.h"
-#include <string.h>
 #include "fmgr.h"
 #include "utils/geo_decls.h"
+#include "utils/builtins.h"
+#include <string.h>
 #include <stdio.h>
 #include <winsock2.h>
-#include "utils/builtins.h"
 #pragma comment(lib, "ws2_32")
 
 #ifdef PG_MODULE_MAGIC
